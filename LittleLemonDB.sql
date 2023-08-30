@@ -50,7 +50,8 @@ DROP TABLE IF EXISTS `LittleLemonDM`.`Orders` ;
 CREATE TABLE IF NOT EXISTS `LittleLemonDM`.`Orders` (
   `pkOrderID` INT NOT NULL,
   `fkCustomerID` INT NULL,
-  `Cost` DECIMAL NULL,
+  `Cost` DECIMAL(10,2) NULL,
+  `Quantity` INT NULL,
   `fkMenuID` INT NULL,
   PRIMARY KEY (`pkOrderID`),
   INDEX `FK_Orders_Customers_idx` (`fkCustomerID` ASC) VISIBLE,
@@ -121,7 +122,6 @@ CREATE TABLE IF NOT EXISTS `LittleLemonDM`.`MenuItems` (
   `pkItemID` INT NOT NULL,
   `Name` VARCHAR(200) NULL,
   `Type` VARCHAR(10) NULL,
-  `Price` DECIMAL NULL,
   `fkMenuID` INT NULL,
   PRIMARY KEY (`pkItemID`),
   INDEX `FK_MenuItems_Menu_idx` (`fkMenuID` ASC) VISIBLE,

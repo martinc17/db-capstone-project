@@ -113,13 +113,19 @@ VALUES (1, 1, 75.00, 1, 1),
 	(15, 15, 75.00, 1, 4) 
 
 -- Populate staff table
-INSERT INTO littlelemondm.staff (pkStaffID, Name, Role, Salary, PhoneNumber)
+INSERT INTO littlelemondm.staff (
+		pkStaffID,
+		Name,
+		Role,
+		Salary,
+		PhoneNumber
+	)
 VALUES (1, 'Steve', 'Manager', 45000, '555-4321'),
 	(2, 'Lucy', 'Head Chef', 40000, '555-7745'),
 	(3, 'Dan', 'Chef', 30000, '555-6767'),
 	(4, 'Kate', 'Server', 25000, '555-9812'),
 	(5, 'Joe', 'Server', 25000, '555-7420') 
-
+	
 -- Populate bookings table
 INSERT INTO littlelemondm.bookings (
 		pkBookingID,
@@ -144,4 +150,19 @@ VALUES (1, '2023-07-05', '17:30:00', 1, 1, 1, 4),
 	(12, '2023-07-12', '20:00:00', 2, 2, 12, 5),
 	(13, '2023-07-17', '17:30:00', 3, 1, 13, 4),
 	(14, '2023-07-22', '18:00:00', 4, 5, 14, 5),
-	(15, '2023-07-27', '18:30:00', 5, 1, 15, 4)
+	(15, '2023-07-27', '18:30:00', 5, 1, 15, 4) 
+
+-- Populate MenuItems
+INSERT INTO MenuItems (pkItemID, Name, Type, fkMenuID)
+VALUES (1, 'Buffalo Wings', 'Starter', 1),
+	(2, 'Brisket Burger', 'Main', 1),
+	(3, 'Ice Cream Sundae', 'Dessert', 1),
+	(4, 'Greek Salad', 'Starter', 2),
+	(5, 'Chicken Gyros', 'Main', 2),
+	(6, 'Baklava', 'Dessert', 2),
+	(7, 'Bruschetta', 'Starter', 3),
+	(8, 'Pizza', 'Main', 3),
+	(9, 'Tiramisu', 'Dessert', 3),
+	(10, 'Spring Rolls', 'Starter', 4),
+	(11, 'Hoisin Duck', 'Main', 4),
+	(12, 'Red Bean Bun', 'Dessert', 4)

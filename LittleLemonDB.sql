@@ -90,7 +90,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `LittleLemonDM`.`Bookings` ;
 
 CREATE TABLE IF NOT EXISTS `LittleLemonDM`.`Bookings` (
-  `pkBookingID` INT NOT NULL,
+  `pkBookingID` INT NOT NULL AUTO_INCREMENT,
   `BookingDate` DATE NULL,
   `BookingTime` TIME NULL,
   `TableNumber` INT NULL,
